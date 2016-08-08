@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% load staticfiles %}
+
+{% block head_js %}
+    <script src="https://js.stripe.com/v2/" type="text/javascript"></script>
+    <script type="text/javascript">
+
+    </script>
+
+{% endblock %}
+
+{% block content %}
+    <form role="form" method="post" id="register-form" action="{% url 'register' %}">
+
+
+
+                <legend>Create a new account</legend>
+                {% csrf_token %}
+                {{ form| as_bootstrap }}
+                <div class="form-group">
+                <input class="btn btn-primary" id="validate_card_btn" name="commit" type="submit" value="Register">
+                </div>
+    </form>
+
+{% endblock %}
