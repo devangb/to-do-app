@@ -1,25 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $("#id_assigned_at").datepicker({
-      changeMonth: true,
-      changeYear: true,
-      yearRange: "2016:2030"
-  } );
-});
-  </script>
-</head>
-<body>
+{% extends "base.html" %}
 
-<form method="POST">
+{% block content %}
+    <form method="POST">
     {% csrf_token %}
     {{ form.non_field_errors }}
 <div class="fieldWrapper">
@@ -34,6 +16,4 @@
 </div>
     <button type="submit" class=" btn btn-info">Save</button>
 </form>
-
-</body>
-</html>
+{% endblock %}
