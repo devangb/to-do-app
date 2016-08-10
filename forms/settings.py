@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django_forms_bootstrap',
     'todo',
     'accounts',
-    'bootstrap3_datetime'
+    'djcelery'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -74,6 +74,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'forms.wsgi.application'
 
+#Email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+#add mail account
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases

@@ -10,7 +10,7 @@ class ToDoItem(models.Model):
     owner = models.ForeignKey(User)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    assigned_at = models.DateField()
+    assigned_at = models.DateTimeField()
 
     def __str__(self):
         return self.description
