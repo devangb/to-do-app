@@ -1,3 +1,0 @@
-language: python
-env:
- - DJANGO_VERSION=1.9.8
